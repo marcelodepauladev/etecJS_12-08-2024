@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4</title>
+</head>
+
+<body>
+    <p id="linha1" class="linha">Linha 1</p>
+    <p id="linha2" class="linha">Linha 2</p>
+    <p id="linha3" class="linha">Linha 3</p>
+
+    <script>
+        const linhas = document.querySelectorAll('p');
+
+        for (let i = 0; i < linhas.length; i++) {
+            linhas[i].style.color = cores();
+        }
+
+        function cores() {
+            const letras = '0123456789ABCDEF';
+            let cor = '#';
+
+            for (let i = 0; i < 6; i++) {
+                cor += letras[Math.floor(Math.random() * 16)];
+            }
+
+            return cor;
+
+        }
+
+        //linhas[0].style.color = 'red';
+
+        /*
+        const linha1 = document.getElementById('linha1');
+        linha1.style.color = "red";
+
+        const linha2 = document.querySelector('p');
+        linha2.innerHTML = "Texto </b>alterado</b>";
+        linha2.style.color = "blue";
+        */
+
+    </script>
+</body>
+
+</html>

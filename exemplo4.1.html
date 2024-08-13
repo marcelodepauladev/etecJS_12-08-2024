@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4.1</title>
+    <style>
+        button{
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        Numero 1: 
+        <input type="number" id="numero1" value=""><br><br>
+        Numero 2:
+        <input type="number" id="numero2" value=""><br><br>
+        <button id="somar" onclick="somar()">+</button>
+        <button id="subtrair">-</button>
+        <button id="dividir">/</button>
+        <button id="multiplicar">*</button><br><br>
+        Resultado:
+        <input type="text" id="txtResultado" value="">
+    </form>
+
+    <script>
+
+    var numero1 = document.querySelector('#numero1').value;
+    var numero2 = document.querySelector('#numero2').value;
+    //const numero2 = document.querySelector('#numero2');
+
+
+        function somar(){
+            let resultado = numero1 + numero2 
+            document.getElementById('txtResultado').value = resultado;
+            //txtResultado.value = resultado;
+        }
+
+        
+
+        //const botao = document.querySelector('#botaoAdd');
+
+
+        // const numero1 = document.querySelector('#numero1').value;
+
+        //const numero1 = document.querySelector('#numero1');
+        //const numero2 = document.querySelector('#numero2');
+        
+        //const compNome = document.querySelector('#nome');
+        //compNome.value = "Eder";
+
+    </script>
+
+
+</body>
+</html>
